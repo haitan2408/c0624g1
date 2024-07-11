@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img id="nobita" src="Nobita.webp" style="position:absolute;left:0; top:0;">
+<script>
+    window.addEventListener('keydown', moveSelection);
+
+    function moveSelection(evt) {
+        let img = document.getElementById("nobita")
+        let left = parseInt(img.style.left)
+        let top = parseInt(img.style.top)
+        switch (evt.keyCode) {
+            case 37:
+                img.style.left = left - 5 +"px"
+                break;
+            case 38:
+                img.style.top = top - 5 +"px"
+                break;
+            case 39:
+                // left: 0px => parseInt(a0px) => NaN
+                // img.style.left = 0 + 5 + "px" => "5px"
+                img.style.left = left + 5 +"px"
+                break;
+            case 40:
+                img.style.top = top + 5 +"px"
+                break;
+        }
+    }
+</script>
+</body>
+</html>

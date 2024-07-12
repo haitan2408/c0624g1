@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+<!--    Lặp với số lần biết trước-->
+    // for(let i =1; i<=11; i++) {
+    //     let check = confirm(`Điểm danh bạn có số thứ tự ${i}`)
+    //     if(check) {
+    //         alert("Có mặt")
+    //     } else {
+    //         alert("Confirm lại với tutor là nghỉ có phép không")
+    //     }
+    // }
+let username = "";
+username = prompt("Nhập username:")
+while (username !=="admin") {
+    alert("Sai mật khẩu")
+    username = prompt("Tài khoản sai. Nhập lại mật khẩu")
+}
+
+let username = "";
+do {
+    username = prompt("Nhập username:")
+} while (username !=="admin")
+// let password.....
+
+// Hiển thị 10 số nguyên tố đầu tiên.
+let count = 0;
+let size = prompt("Nhập số lượng số nguyên tố cần hiển thị")
+
+let num = 2; //Dùng để chạy từ 2 => vô định????.
+// Và chúng ta sẽ kiểm tra num có phải là số nguyên tố hay không
+// Mỗi vòng lặp num sẽ tăng lên 1
+while(count <=size) {
+//     Thuật toán kiểm tra số nguyên tố (chia hết cho 1 và chính nó)
+    if(num ===2 ) {
+        console.log(num +" là số nguyên tố")
+        count++
+    }
+    // Đặt lính canh
+    let isPrime = true;
+    for(let i = 2; i < num; i++) {
+        if(num%i === 0) {
+            isPrime = false;
+            break;
+        }
+    }
+    if(isPrime === true) {
+        console.log(num +" là số nguyên tố")
+        count++
+    }
+    num++;
+}
+
+
+
+
+</script>
+</body>
+</html>

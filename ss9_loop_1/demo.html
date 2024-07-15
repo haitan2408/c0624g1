@@ -43,7 +43,8 @@ while(count <=size) {
     }
     // Đặt lính canh
     let isPrime = true;
-    for(let i = 2; i < num; i++) {
+    // Số 100000 => số lượng vòng lặp cần kiểm tra là 100 thay vì là 99999
+    for(let i = 2; i <= Math.sqrt(num); i++) {
         if(num%i === 0) {
             isPrime = false;
             break;
